@@ -1,11 +1,13 @@
 import express from "express";
 import obtenerHoraActual from "./src/time.js";
+import app2 from "./src/app.js"
 const app = express();
 const port = 3000;
-app.get('/', (req, res) => {
+app.get('/horatime', (req, res) => {
     const hora = obtenerHoraActual();
     res.send(`Hora actual: ${hora}`);
 });
+
 app.use((req, res) => {
     // Definimos el estado 404 y enviamos el HTML con la imagen del gato
  res.status(404).send(` 404 - Ruta no encontrada. Parece que te perdiste. Acá tenés un gato para ayudarte: 

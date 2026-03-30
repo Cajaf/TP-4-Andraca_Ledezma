@@ -26,3 +26,5 @@ res.send(`${Semana} ${fechaAhora.getDate()} de ${mes} de ${fechaAhora.getFullYea
 app.listen(port,() => {
     console.log(`Listening on http://localhost:${port}`)
 })
+
+export default app
